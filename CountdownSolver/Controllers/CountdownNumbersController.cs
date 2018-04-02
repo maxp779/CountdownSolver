@@ -27,22 +27,6 @@ namespace CountdownSolver.Controllers
             return Json(output);
         }
 
-        //[HttpGet("{jsonString}")]
-        //public JsonResult Get(string jsonString)
-        //{
-        //    NumbersInput numbersGameInput = JsonConvert.DeserializeObject<NumbersInput>(jsonString);
-        //    ICollection<string> output = this.RunNumbersGame(numbersGameInput);
-        //    return Json(output);
-        //}
-
-        //[HttpPost]
-        //public JsonResult Post([FromBody] NumbersInput numbersGameInput)
-        //{
-        //    ICollection<string> output = this.RunNumbersGame(numbersGameInput);
-        //    return Json(output);
-        //}
-
-
         private ICollection<string> RunNumbersGame(NumbersInput numbersGameInput)
         {
             ICollection<string> output;

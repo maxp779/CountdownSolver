@@ -32,29 +32,6 @@ namespace CountdownSolver.Controllers
             return wordsFound;
         }
 
-        // GET: api/values
-        //[HttpGet]
-        //public JsonResult Get()
-        //{
-        //    ICollection<string> wordsFound = new List<string>();
-        //    return Json(wordsFound);
-        //}
-
-        //// GET api/values/5
-        //[HttpGet("{inputCharacters}")]
-        //public JsonResult Get(string inputCharacters)
-        //{ 
-        //    CountdownWordsFinder wordFinder = new CountdownWordsFinder();
-        //    ICollection<string> wordsFound = wordFinder.FindAllWords(inputCharacters);
-        //    return Json(wordsFound);
-        //}
-
-        //// POST api/values
-        //[HttpPost]
-        //public void Post([FromBody]string value)
-        //{
-        //}
-
         // PUT api/values/5
         [HttpPut("{id}")]
         public void Put(int id, [FromBody]string value)
