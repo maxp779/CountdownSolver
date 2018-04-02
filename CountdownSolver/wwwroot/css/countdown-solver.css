@@ -1,0 +1,445 @@
+﻿@media screen and (min-width: 980px) /* Desktop */ {
+    body {
+        background: url('../image/countdown.jpg') no-repeat center center fixed;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+    }
+}
+
+@media screen and (max-width: 979px) /* Tablet */ {
+    body {
+        background: url('../image/countdown.jpg') no-repeat center center fixed;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+    }
+}
+
+@media screen and (max-width: 500px) /* Mobile */ {
+    body {
+        background: none;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+    }
+
+    .mainTitle {
+        font-size: 1.25em !important;
+    }
+    .subTitle {
+        font-size: 0.75em !important;
+    }
+    #aboutButton {
+        display: none !important;
+    }
+
+}
+
+.mainTitle {
+    display: inherit;
+    margin: 0;
+    padding: 10px 0 10px;
+    text-align: center;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+    font-weight: 700;
+    font-style: italic;
+    line-height: normal;
+    color: #fff;
+
+    animation-name: color-change;
+    animation-duration: 20s;
+    animation-iteration-count: infinite;
+    font-family: "Courier New", Courier, monospace;
+    font-weight: bold;
+    font-size: 2em;
+}
+
+.subTitle {
+    display: inherit;
+    margin: 0;
+    padding: 10px 0 10px;
+    text-align: center;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+    font-family: Josefin Slab,Helvetica Neue,Helvetica,Arial,sans-serif;
+    font-size: 1em;
+    font-weight: 700;
+    line-height: normal;
+    color: #fff;
+}
+
+.spacer-small {
+    margin-top: 10px;
+}
+
+.spacer-medium {
+    margin-top: 20px;
+}
+
+.spacer-large {
+    margin-top: 30px;
+}
+
+.listWrapper {
+    max-height: 400px;
+    overflow-y: auto;
+}
+
+.title {
+    animation-name: color-change;
+    animation-duration: 20s;
+    animation-iteration-count: infinite;
+    font-family: "Courier New", Courier, monospace;
+    font-weight: bold;
+    font-style: italic;
+    font-size: 1.5em;
+}
+
+.countdown {
+    -webkit-animation-name: color-change;
+    -webkit-animation-duration: 90s;
+    -webkit-animation-iteration-count: infinite;
+    animation-name: color-change;
+    animation-duration: 90s;
+    animation-iteration-count: infinite;
+}
+
+.solver {
+    -webkit-animation-name: color-change2;
+    -webkit-animation-duration: 90s;
+    -webkit-animation-iteration-count: infinite;
+    animation-name: color-change2;
+    animation-duration: 90s;
+    animation-iteration-count: infinite;
+}
+
+@-webkit-keyframes color-change {
+    5% {
+        color: #33FF34;
+    }
+
+    10% {
+        color: #A3FF33;
+    }
+
+    15% {
+        color: #F3FF33;
+    }
+
+    20% {
+        color: #FFE133;
+    }
+
+    25% {
+        color: #FFC333;
+    }
+
+    30% {
+        color: #FF8633;
+    }
+
+    35% {
+        color: #FF3333;
+    }
+
+    40% {
+        color: #FF3373;
+    }
+
+    45% {
+        color: #FF33B0;
+    }
+
+    50% {
+        color: #FF33E9;
+    }
+
+    55% {
+        color: #C633FF;
+    }
+
+    60% {
+        color: #8D33FF;
+    }
+
+    65% {
+        color: #4533FF;
+    }
+
+    70% {
+        color: #3388FF;
+    }
+
+    75% {
+        color: #33AEFF;
+    }
+
+    80% {
+        color: #33D7FF;
+    }
+
+    85% {
+        color: #33FFF6;
+    }
+
+    90% {
+        color: #33FFC4;
+    }
+
+    95% {
+        color: #33FFAA;
+    }
+
+    100% {
+        color: #33FF34;
+    }
+}
+
+@keyframes color-change {
+    5% {
+        color: #33FF34;
+    }
+
+    10% {
+        color: #A3FF33;
+    }
+
+    15% {
+        color: #F3FF33;
+    }
+
+    20% {
+        color: #FFE133;
+    }
+
+    25% {
+        color: #FFC333;
+    }
+
+    30% {
+        color: #FF8633;
+    }
+
+    35% {
+        color: #FF3333;
+    }
+
+    40% {
+        color: #FF3373;
+    }
+
+    45% {
+        color: #FF33B0;
+    }
+
+    50% {
+        color: #FF33E9;
+    }
+
+    55% {
+        color: #C633FF;
+    }
+
+    60% {
+        color: #8D33FF;
+    }
+
+    65% {
+        color: #4533FF;
+    }
+
+    70% {
+        color: #3388FF;
+    }
+
+    75% {
+        color: #33AEFF;
+    }
+
+    80% {
+        color: #33D7FF;
+    }
+
+    85% {
+        color: #33FFF6;
+    }
+
+    90% {
+        color: #33FFC4;
+    }
+
+    95% {
+        color: #33FFAA;
+    }
+
+    100% {
+        color: #33FF34;
+    }
+}
+
+@keyframes color-change2 {
+    5% {
+        color: #33E6FF;
+    }
+
+    10% {
+        color: #33BDFF;
+    }
+
+    15% {
+        color: #3384FF;
+    }
+
+    20% {
+        color: #5833FF;
+    }
+
+    25% {
+        color: #7A33FF;
+    }
+
+    30% {
+        color: #AB33FF;
+    }
+
+    35% {
+        color: #EB33FF;
+    }
+
+    40% {
+        color: #FF33BF;
+    }
+
+    45% {
+        color: #FF3383;
+    }
+
+    50% {
+        color: #FF3333;
+    }
+
+    55% {
+        color: #FF7F33;
+    }
+
+    60% {
+        color: #FFA533;
+    }
+
+    65% {
+        color: #FFD633;
+    }
+
+    70% {
+        color: #FFE933;
+    }
+
+    75% {
+        color: #DCFF33;
+    }
+
+    80% {
+        color: #85FF33;
+    }
+
+    85% {
+        color: #36FF33;
+    }
+
+    90% {
+        color: #33FF88;
+    }
+
+    95% {
+        color: #33FFC0;
+    }
+
+    100% {
+        color: #33E6FF;
+    }
+}
+
+@-webkit-keyframes color-change2 {
+    5% {
+        color: #33E6FF;
+    }
+
+    10% {
+        color: #33BDFF;
+    }
+
+    15% {
+        color: #3384FF;
+    }
+
+    20% {
+        color: #5833FF;
+    }
+
+    25% {
+        color: #7A33FF;
+    }
+
+    30% {
+        color: #AB33FF;
+    }
+
+    35% {
+        color: #EB33FF;
+    }
+
+    40% {
+        color: #FF33BF;
+    }
+
+    45% {
+        color: #FF3383;
+    }
+
+    50% {
+        color: #FF3333;
+    }
+
+    55% {
+        color: #FF7F33;
+    }
+
+    60% {
+        color: #FFA533;
+    }
+
+    65% {
+        color: #FFD633;
+    }
+
+    70% {
+        color: #FFE933;
+    }
+
+    75% {
+        color: #DCFF33;
+    }
+
+    80% {
+        color: #85FF33;
+    }
+
+    85% {
+        color: #36FF33;
+    }
+
+    90% {
+        color: #33FF88;
+    }
+
+    95% {
+        color: #33FFC0;
+    }
+
+    100% {
+        color: #33E6FF;
+    }
+}
