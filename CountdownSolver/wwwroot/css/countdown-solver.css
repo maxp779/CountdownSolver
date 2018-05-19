@@ -1,4 +1,9 @@
-﻿@media screen and (min-width: 980px) /* Desktop */ {
+﻿/*I dont know why the fuck this is needed but scrollbars and whitespace appear on mobile when not present.*/
+html, body {
+    overflow-x: hidden;
+}
+
+@media screen and (min-width: 980px) /* Desktop */ {
     body {
         background: url('../image/countdown.jpg') no-repeat center center fixed;
         -webkit-background-size: cover;
@@ -114,6 +119,10 @@
     animation-name: color-change2;
     animation-duration: 90s;
     animation-iteration-count: infinite;
+}
+
+footer {
+    margin-bottom: 10px;
 }
 
 @-webkit-keyframes color-change {

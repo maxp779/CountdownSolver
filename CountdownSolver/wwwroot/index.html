@@ -2,6 +2,8 @@
 <html>
 <head>
     <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
     <title>Countdown Solver</title>
 
     <!--Favicon-->
@@ -21,11 +23,7 @@
 
 </head>
 <body>
-    <div class="animated slideInLeft">
-        <!--<h1 class="name title text-center">Countdown Solver</h1>-->
-    </div>
     <div id="app">
-
         <div class="container">
             <div class="row">
                 <div class="col-sm-12">
@@ -46,122 +44,125 @@
                                 Enter letters and click/tap get words that can be created with only those letters. Non letter characters are ignored.
                             </h6>
                             <form id="lettersGameForm">
-                                <div class="form-group row">
-                                    <div class="col-sm-12">
-                                        <div class="input-group">
-                                            <input id="letters" name="letters" type="text" class="form-control" placeholder="Enter letters here" aria-label="Enter letters here" required>
-                                            <div class="input-group-append">
-                                                <button id="lettersGameSubmitButton" class="btn btn-primary" type="submit">Get words</button>
-                                                <button id="lettersGameClearButton" class="btn btn-danger" type="button">Clear</button>
+                                <div class="form-group">
+                                    <div class="row">
+                                        <div class="col-sm-12">
+                                            <div class="input-group">
+                                                <input id="letters" name="letters" type="text" class="form-control" aria-label="Enter letters here" required>
+                                                <div class="input-group-append">
+                                                    <button id="lettersGameSubmitButton" class="btn btn-primary" type="submit">Get words</button>
+                                                    <button id="lettersGameClearButton" class="btn btn-danger" type="button">Clear</button>
+                                                </div>
                                             </div>
-                                        </div>
-                                        <p class="spacer-small" v-if="vueReactiveObject.totalWordsFound > 0">Total words found: {{ vueReactiveObject.totalWordsFound }}</p>
-                                        <p v-if="vueReactiveObject.totalWordsFound > 1000">Only the first 1000 are displayed.</p>
-                                        <p class="spacer-small" v-if="vueReactiveObject.noWordsFound">There were no words found.</p>
-                                        <button v-if="vueReactiveObject.totalWordsFound > 0" class="btn btn-primary" type="button" id="downloadLettersGameResults">Download all results</button>
-                                        <div class="listWrapper spacer-medium">
-                                            <ul class="list-group">
-                                                <li v-for="object in vueReactiveObject.lettersGameResults" class="list-group-item d-flex justify-content-between align-items-center">
-                                                    {{ object.word }}
-                                                    <span class="badge badge-primary badge-pill">Letters: {{ object.letterCount }}</span>
-                                                </li>
-                                            </ul>
+                                            <p class="spacer-small" v-if="vueReactiveObject.totalWordsFound > 0">Total words found: {{ vueReactiveObject.totalWordsFound }}</p>
+                                            <p v-if="vueReactiveObject.totalWordsFound > 1000">Only the first 1000 are displayed.</p>
+                                            <p class="spacer-small" v-if="vueReactiveObject.noWordsFound">There were no words found.</p>
+                                            <button v-if="vueReactiveObject.totalWordsFound > 0" class="btn btn-primary" type="button" id="downloadLettersGameResults">Download all results</button>
+                                            <div class="listWrapper spacer-medium">
+                                                <ul class="list-group">
+                                                    <li v-for="object in vueReactiveObject.lettersGameResults" class="list-group-item d-flex justify-content-between align-items-center">
+                                                        {{ object.word }}
+                                                        <span class="badge badge-primary badge-pill">Letters: {{ object.letterCount }}</span>
+                                                    </li>
+                                                </ul>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
                             </form>
                         </div>
                     </div>
+                </div>
+            </div>
 
-                    <div class="row spacer-large">
-                        <div class="col-sm-12">
-                            <div class="card bg-light border border-dark animated slideInLeft">
-                                <h4 class="card-header text-white bg-dark">Numbers game solver</h4>
-                                <div class="card-body">
-                                    <h5 class="card-title">How to use:</h5>
-                                    <h6 class="card-subtitle mb-2 text-muted">
-                                        Enter 6 numbers, one in each box. Then enter a target number. Click/tap solve to see the solutions that
-                                        can hit that target using only the 6 numbers you supplied.
-                                    </h6>
+            <div class="row spacer-large">
+                <div class="col-sm-12">
+                    <div class="card bg-light border border-dark animated slideInLeft">
+                        <h4 class="card-header text-white bg-dark">Numbers game solver</h4>
+                        <div class="card-body">
+                            <h5 class="card-title">How to use:</h5>
+                            <h6 class="card-subtitle mb-2 text-muted">
+                                Enter 6 numbers, one in each box. Then enter a target number. Click/tap solve to see the solutions that
+                                can hit that target using only the 6 numbers you supplied.
+                            </h6>
 
-                                    <form id="numbersGameForm">
-                                        <div class="form-group row">
-                                            <div class="col-sm-12">
-                                                <div class="input-group">
-                                                    <input name="number1" required min="1" max="1000" type="number" class="form-control" placeholder="Enter number" aria-label="Enter number">
-                                                    <input name="number2" required min="1" max="1000" type="number" class="form-control" placeholder="Enter number" aria-label="Enter number">
-                                                    <input name="number3" required min="1" max="1000" type="number" class="form-control" placeholder="Enter number" aria-label="Enter number">
-                                                    <input name="number4" required min="1" max="1000" type="number" class="form-control" placeholder="Enter number" aria-label="Enter number">
-                                                    <input name="number5" required min="1" max="1000" type="number" class="form-control" placeholder="Enter number" aria-label="Enter number">
-                                                    <input name="number6" required min="1" max="1000" type="number" class="form-control" placeholder="Enter number" aria-label="Enter number">
-                                                </div>
+                            <form id="numbersGameForm">
+                                <div class="form-group">
+                                    <div class="row">
+                                        <div class="col-sm-12">
+                                            <div class="input-group">
+                                                <input name="number1" required min="1" max="1000" type="number" class="form-control" aria-label="Enter number">
+                                                <input name="number2" required min="1" max="1000" type="number" class="form-control" aria-label="Enter number">
+                                                <input name="number3" required min="1" max="1000" type="number" class="form-control" aria-label="Enter number">
+                                                <input name="number4" required min="1" max="1000" type="number" class="form-control" aria-label="Enter number">
+                                                <input name="number5" required min="1" max="1000" type="number" class="form-control" aria-label="Enter number">
+                                                <input name="number6" required min="1" max="1000" type="number" class="form-control" aria-label="Enter number">
                                             </div>
                                         </div>
-
-                                        <div class="form-group row">
-                                            <div class="col-sm-4">
-                                                <label for="exampleFormControlSelect1">
-                                                    <button type="button" class="btn btn-info" data-toggle="modal" data-target="#algorithmInfoModal">
-                                                        <i class="fas fa-info-circle"></i> Algorithm:
-                                                    </button>
-                                                </label>
-                                                <select name="algorithm" required class="form-control">
-                                                    <option selected="selected" value="recursive">Recursive</option>
-                                                    <option value="bruteforce">Brute Force</option>
-                                                </select>
-                                            </div>
-                                        </div>
-
-                                        <div class="form-group row">
-                                            <div class="col-md-6">
-                                                <div class="input-group">
-                                                    <input name="target" required min="1" max="1000" type="number" class="form-control" placeholder="Enter target" aria-label="Enter target">
-                                                    <div class="input-group-append">
-                                                        <button id="numbersGameSubmitButton" class="btn btn-primary" type="submit">Solve</button>
-                                                        <button id="numbersGameClearButton" class="btn btn-danger" type="button">Clear</button>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </form>
-                                    <p class="spacer-small" v-if="vueReactiveObject.totalCalculationsFound > 0">Total solutions found: {{ vueReactiveObject.totalCalculationsFound }}</p>
-                                    <p v-if="vueReactiveObject.totalCalculationsFound > 1000">Only the first 1000 are displayed.</p>
-                                    <p class="spacer-small" v-if="vueReactiveObject.noCalculationsFound">There were no solutions found.</p>
-                                    <button v-if="vueReactiveObject.totalCalculationsFound > 0" class="btn btn-primary" type="button" id="downloadnumbersGameResults">Download all results</button>                                    <div class="listWrapper spacer-medium">
-                                        <ul id="numbersGameResults" class="list-group">
-                                            <li v-for="calculation in vueReactiveObject.numbersGameResults" class="list-group-item d-flex justify-content-between align-items-center">
-                                                {{ calculation }}
-                                            </li>
-                                        </ul>
                                     </div>
                                 </div>
+
+                                <div class="form-group">
+                                    <div class="row">
+                                        <div class="col-sm-4">
+                                            <label for="exampleFormControlSelect1">
+                                                <button type="button" class="btn btn-info" data-toggle="modal" data-target="#algorithmInfoModal">
+                                                    <i class="fas fa-info-circle"></i> Algorithm:
+                                                </button>
+                                            </label>
+                                            <select name="algorithm" required class="form-control">
+                                                <option selected="selected" value="recursive">Recursive</option>
+                                                <option value="bruteforce">Brute Force</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <div class="row">
+                                        <div class="col-sm-6">
+                                            <div class="input-group">
+                                                <input name="target" required min="1" max="1000" type="number" class="form-control" placeholder="Enter target" aria-label="Enter target">
+                                                <div class="input-group-append">
+                                                    <button id="numbersGameSubmitButton" class="btn btn-primary" type="submit">Solve</button>
+                                                    <button id="numbersGameClearButton" class="btn btn-danger" type="button">Clear</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                            <p class="spacer-small" v-if="vueReactiveObject.totalCalculationsFound > 0">Total solutions found: {{ vueReactiveObject.totalCalculationsFound }}</p>
+                            <p v-if="vueReactiveObject.totalCalculationsFound > 1000">Only the first 1000 are displayed.</p>
+                            <p class="spacer-small" v-if="vueReactiveObject.noCalculationsFound">There were no solutions found.</p>
+                            <button v-if="vueReactiveObject.totalCalculationsFound > 0" class="btn btn-primary" type="button" id="downloadnumbersGameResults">Download all results</button>                                    <div class="listWrapper spacer-medium">
+                                <ul id="numbersGameResults" class="list-group">
+                                    <li v-for="calculation in vueReactiveObject.numbersGameResults" class="list-group-item d-flex justify-content-between align-items-center">
+                                        {{ calculation }}
+                                    </li>
+                                </ul>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
 
-
-
         </div><!--container-->
-
     </div><!--app-->
 
 
 
-    <footer class="spacer-large">
-        <div class="container">
-            <div class="card bg-light animated slideInRight">
-                <div class="card-body">
-                    <div class="row">
-                        <div class="col-sm-4">
-                            <button id="aboutButton" type="button" class="btn btn-info" data-toggle="modal" data-target="#aboutSiteModal">
-                                About
-                            </button>
-                        </div>
-                        <div class="col-sm-4">
-                            <p class="text-center">Created by <a href="http://www.maxpower.rocks">Maximilian Power</a></p>
-                        </div>
+    <footer class="container spacer-large">
+        <div class="card bg-light animated slideInRight">
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-sm-4">
+                        <button id="aboutButton" type="button" class="btn btn-info" data-toggle="modal" data-target="#aboutSiteModal">
+                            About
+                        </button>
+                    </div>
+                    <div class="col-sm-4">
+                        <p class="text-center">Created by <a href="http://www.maxpower.rocks">Maximilian Power</a></p>
                     </div>
                 </div>
             </div>
