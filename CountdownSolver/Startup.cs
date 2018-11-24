@@ -36,7 +36,13 @@ namespace CountdownSolver
 
             app.UseMvc();
             app.UseDefaultFiles();
-            app.UseStaticFiles();
+            app.UseStaticFiles(new StaticFileOptions
+            {
+                ServeUnknownFileTypes = true,
+                DefaultContentType = "text/plain"
+            });
+
+
         }
     }
 }
